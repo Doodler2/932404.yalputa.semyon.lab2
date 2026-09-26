@@ -1,0 +1,79 @@
+:root {
+    --main-bg: #ffe4e1;  
+    --accent: #333333;    
+    --font-main: Arial, sans-serif;
+}
+
+body {
+    background-image: url('photos/bg.jpg'); 
+    background-attachment: fixed;
+    background-size: cover; 
+    background-repeat: no-repeat;
+    background-color: var(--main-bg); 
+    color: var(--accent);
+    font-family: var(--font-main);
+    margin: 20px;
+    transition: background-color 0.3s; 
+}
+
+
+body:has(section:hover) {
+    background-position: center bottom;
+}
+
+body:has(input:focus, textarea:focus) {
+    background-color: #c9a6a6; 
+}
+
+header {
+    position: static;
+    background-color: var(--main-bg);
+    padding: 15px;
+    border-bottom: 2px solid var(--accent);
+}
+
+main {
+    position: relative;
+    margin-top: 20px;
+}
+
+aside {
+    position: absolute;
+    right: 0;
+    top: 50px;
+    width: 200px;
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 15px;
+    border-left: 3px solid var(--accent);
+}
+
+button {
+    background-color: var(--accent);
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+}
+button:hover {
+    background-color: #555555; 
+}
+button:active {
+    background-color: #000000; 
+}
+
+input:focus, textarea:focus {
+    outline: 2px solid var(--accent);
+}
+
+a:link {
+    color: var(--accent);
+}
+a:visited {
+    color: #777777; 
+}
+
+img {
+    border: 3px solid var(--accent);
+    display: block;
+    margin-bottom: 20px;
+}
